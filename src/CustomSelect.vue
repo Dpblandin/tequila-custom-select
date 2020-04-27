@@ -2,7 +2,7 @@
   <div>
     <select :disabled="$attrs.disabled" ref="select" class="form-control" @change="change">
       <slot v-if="placeholderOption">
-        <option value="">Choose</option>
+        <option value="">{{ placeholderOption }}</option>
       </slot>
       <option v-for="(option, index) in options"
               :key="index" :value="option[optionValueKey]"
@@ -37,8 +37,8 @@
       },
       placeholderOption: {
         required: false,
-        default: false,
-      }
+        default: null,
+      },
     },
     data: () => ({
       selected: null,
