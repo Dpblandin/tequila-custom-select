@@ -6,7 +6,13 @@ This one is commonly used across multiple projects
 
 ```
 <template>
- <custom-select :options="options" :optionKeys="optionKeys">
+ <custom-select
+    :options="options"
+    :optionKeys="optionKeys"
+    :custom-select-options="customSelectOptions"
+    :selected-value="selectedValue"
+    :placeholderOption="placeholderOption"
+/>
 </template>
 
 import teqCustomSelect from 'teq-custom-select"
