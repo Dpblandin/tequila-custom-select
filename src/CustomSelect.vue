@@ -12,12 +12,9 @@
     </select>
   </div>
 </template>
-
 <script>
   import customSelect from 'custom-select';
-
   const defaultOptionKeys = () => (['value', 'label']);
-
   export default {
     name: 'teq-custom-select',
     props: {
@@ -58,6 +55,15 @@
           return;
         }
         this.customSelects[0].value = newValue;
+      },
+      options() {
+        this.$nextTick(() => {
+          if (this.customSelects.length) {
+            this.customSelects.forEach(cSelect => cSelect.destroy());
+          }
+
+          this.customSelects = customSelect(this.$refs.select, this.customSelectOptions);
+        });
       }
     },
     mounted() {
