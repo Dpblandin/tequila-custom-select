@@ -15,9 +15,12 @@ This one is commonly used across multiple projects
 />
 </template>
 
-import teqCustomSelect from 'teq-custom-select"
+import teqCustomSelect from 'teq-custom-select'
 
 export default {
+    components: {
+      teqCustomSelect,
+    }
     data:() => ({
         optionns : [
             {
