@@ -11,7 +11,7 @@ This one is commonly used across multiple projects
     :optionKeys="optionKeys"
     :custom-select-options="customSelectOptions"
     :selected-value="selectedValue"
-    :placeholderOption="placeholderOption"
+    :placeholder-option="placeholderOption"
 />
 </template>
 
